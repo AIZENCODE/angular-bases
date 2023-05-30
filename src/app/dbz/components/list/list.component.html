@@ -1,0 +1,27 @@
+<div class="">
+    <ul class="">
+        <li class="flex justify-between  items-center   p-3 " [ngClass]="{'bg-blue-100 text-blue-800':isEven, 'bg-slate-200':isLast
+    }" *ngFor="
+        let character of characterList; 
+        let i = index;
+        let isFirst = first;
+        let isLast = last;
+        let isEven = even;
+        let isOdd = odd;
+        
+        ">
+
+            <span>
+                <span class="text-blue-500 font-bold"> {{i +1}}.</span>
+                {{character.name}} - Power: {{character.power}}
+            </span>
+
+
+
+
+            <button (click)="onDeleteCharacter(character.id)" class=" py-1 px-2 rounded   bg-red-500 text-white">X</button>
+
+        </li>
+
+    </ul>
+</div>

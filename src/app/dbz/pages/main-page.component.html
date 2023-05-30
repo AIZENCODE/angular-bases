@@ -1,0 +1,16 @@
+<div class="container mx-auto">
+
+    <h1 class="mb-5">Dragon ball Z page</h1>
+    <hr>
+
+    <div class="grid grid-cols-2 gap-4 ">
+
+
+        <app-dbz-list [characterList]="characters" (OnDelete)="onDeleteCharacter($event)"></app-dbz-list>
+        <div class="">
+            <app-dbz-add (onNewCharacter)="onNewCharacter($event)"></app-dbz-add>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<form class="border p-5 grid gap-5" (ngSubmit)="emitCharacter()" action="">
+    <h2 class="font-bold text-3xl">Ingresar personaje</h2>
+
+    <div class="grid gap-2">
+        <label for="">Nombre del personaje:</label>
+        <input [(ngModel)]="character.name" name="name" class="p-2 w-full border" type="text" placeholder="nombre del personaje">
+    </div>
+    <div class="grid gap-2">
+        <label for="">Poder:</label>
+        <input [(ngModel)]="character.power" name="power" class="p-2 w-full border" type="number" placeholder="40">
+    </div>
+
+
+    <button type="submit"  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        Agregar
+    </button>
+
+    <!-- <pre>{{character | json}} </pre> -->
+</form>
